@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<html>
+<head>
+<style>
+h1 {
+text-align: center;
+color:white;
+font-size:300%;
+font-family:courier;
+}
+h3 {
+text-align: center;
+color:white;
+font-size:100%;
+font-family:courier;
+}
+p {
+text-align: center;
+}
+div {
+text-align: center;
+}
+form {
+margin: 0 auto;
+width:70px;
+}
+
+</style>
+</head>
+<h1> {{name}} </h1>
+<h3> Display victims </h3>
+<form action="index">
+    <input type="submit" value="submit">
+</form>
+</html>
+
+{% endblock %}

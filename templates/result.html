@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<html>
+<head>
+<style>
+
+h2 {
+text-align: center;
+color:white;
+font-size:200%;
+font-family:courier;
+
+}
+h3 {
+text-align: center;
+color:white;
+font-size:100%;
+font-family:courier;
+}
+div {
+background-color: white;
+background-opacity: 30%;
+padding: 30px;
+  top: 10%;
+  left: 40%;
+position: absolute;
+text-align: left;
+}
+
+</style>
+</head>
+
+<!--<h2> Victims found in database </h2>-->
+<!--<div>-->
+<!--{% if victims %}-->
+<!--    {% for v in victims %}-->
+<!--        Victim id: #{{v.id}}<br>-->
+<!--        First name: {{v.v_first_name}}<br>-->
+<!--        Last name: {{v.v_last_name}}<br>-->
+<!--        Date of birth: {{v.v_dob}}<br>-->
+<!--        Place of birth: {{v.v_pob}}<br>-->
+<!--        <br>-->
+<!--{% endfor %}-->
+<!--{% else %}-->
+<!--Nothing<br>-->
+<!--{% endif %}-->
+<!--</div>-->
+
+<!--<h2> Cases found in database </h2>-->
+<!--<div>-->
+<!--{% if criminals %}-->
+<!--    {% for c in criminals %}-->
+<!--        Criminal id: #{{c.id}}<br>-->
+<!--        First name: {{c.c_first_name}}<br>-->
+<!--        Last name: {{c.c_last_name}}<br>-->
+<!--        Date of birth: {{c.c_dob}}<br>-->
+<!--        Place of birth: {{c.c_pob}}<br>-->
+<!--        Record: {{c.record}}<br>-->
+<!--        <br>-->
+<!--{% endfor %}-->
+<!--{% else %}-->
+<!--Nothing<br>-->
+<!--{% endif %}-->
+<!--</div>-->
+
+<h2> Cases found in database </h2>
+<div>
+{% if cases %}
+    {% for c in cases %}
+        Case id: #{{c.id}}<br>
+        Date: {{c.case_date}}<br>
+        Place: {{c.case_place}}<br>
+        Type: {{c.case_type}}<br>
+        Suspect description: {{c.suspect_description}}<br>
+        Victim(s): {{c.victim}}<br>
+        Officers: {{c.officers}}<br>
+        <h5> Generate list of suspects for case # </h5>
+        <form action="generate_suspects">
+            <input id="case_id" type="text" name="case_id" value="{{ c.id }}">
+            <input type="submit" value="submit">
+        </form>
+        <br>
+{% endfor %}
+{% else %}
+Nothing<br>
+{% endif %}
+</div>
+
+</html>
+
+{% endblock %}
+

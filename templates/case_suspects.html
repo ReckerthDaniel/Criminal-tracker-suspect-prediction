@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<html>
+<head>
+<style>
+
+h2 {
+text-align: center;
+color:white;
+font-size:200%;
+font-family:courier;
+
+}
+h3 {
+text-align: center;
+color:white;
+font-size:100%;
+font-family:courier;
+}
+div {
+background-color: white;
+background-opacity: 30%;
+padding: 30px;
+  top: 10%;
+  left: 40%;
+position: absolute;
+text-align: left;
+}
+
+</style>
+</head>
+
+<h3>Possible suspects for case #{{case_id}}</h3>
+<div>
+
+  <form action="d_tree">
+    <input type="submit" value="Show decision tree">
+  </form>
+
+<h5>Description of suspect:</h5>
+Name: {{suspect.s_name}}<br>
+Age: {{suspect.s_age}}<br>
+Gender: {{suspect.s_gender}}<br>
+Eye color: {{suspect.s_eye_color}}<br>
+Hair color: {{suspect.s_hair_color}}<br>
+Height: {{suspect.s_height}} cm<br>
+Weight: {{suspect.s_weight}} kgs<br>
+Distinctive marks: {{suspect.s_distinctive_marks}}<br>
+<br>
+
+    <h5>Criminals from our database in desscending match order</h5>
+
+{% if criminals %}
+    {% for c in criminals %}
+        <b> Criminal id </b>: #{{c.id}}<br>
+        <b> First name </b> : {{c.c_first_name}}<br>
+        <b> Last name </b>: {{c.c_last_name}}<br>
+        <b> Date of birth </b>: {{c.c_dob}}<br>
+        <b> Place of birth </b>: {{c.c_pob}}<br>
+        <b> Eye color </b>: {{c.c_eye_color}}<br>
+        <b> Hair color </b>: {{c.c_hair_color}}<br>
+        <b> Height </b>: {{c.c_height}}<br>
+        <b> Weight </b>: {{c.c_weight}}<br>
+        <b> Record </b>: {{c.record}}<br>
+        <b> Distinctive marks </b>: {{c.c_distinctive_marks}}<br>
+        <b> Match </b>: {{c.match}}%<br>
+
+        <br>
+{% endfor %}
+{% else %}
+Nothing<br>
+{% endif %}
+</div>
+
+</html>
+
+{% endblock %}
+

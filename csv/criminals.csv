@@ -1,0 +1,11 @@
+id,c_first_name,c_last_name,c_dob,c_pob,c_gender,c_eye_color,c_hair_color,c_height,c_weight,c_distinctive_marks,c_record
+1,John,Doe,1985-06-09,"Wayne, New Jersey",M,BLU,BLO,172,86,NONE,3
+2,Edith,Stone,1968-08-23,"San Luis, CA",F,BLA,BLO,182,53,NONE,5
+3,Stanley,Kornish,1952-03-16,"Saginaw, MI",M,BLA,GI,175,51,dark point,1
+4,James,Calhoun,1971-10-13,"East Lansing, MI",M,BR,BLA,179,71,freckle,1
+5,Nancy,Stevens,1992-10-13,"Manchester, MO",F,GRA,BLO,175,61,NONE,6
+6,Dee,Matter,1980-11-02,"Milwaukee, WI",M,GRE,BR,183,90,wrinkle,4
+7,Jocelyn,Lewis,1983-09-18,"Golden Valley, MN",F,GRA,BR,169,51,U,10
+8,John,Baltz,1972-10-13,"Salinas, CA",M,BR,BLA,172,69,NONE,9
+9,Charles,Webber,1950-07-09,"Sacramento, CA",M,GRA,BLO,182,87,NONE,8
+10,Anna,Jackson,1967-10-23,"Johnson City, TN",F,GRA,WH,182,71,mole,11
